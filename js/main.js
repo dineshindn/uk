@@ -10,8 +10,8 @@
         }, 1);
     };
     spinner();
-    
-    
+
+
     // Initiate the wowjs
     new WOW().init();
 
@@ -32,8 +32,8 @@
             }
         }
     });
-    
-    
+
+
     // Back to top button
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
@@ -74,10 +74,10 @@
         }
     });
 
-    
+
 })(jQuery);
 
-/**************************/ 
+/**************************/
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 const cartItemsElement = document.getElementById("cart-items");
@@ -129,13 +129,14 @@ function updateCartCount() { // Add this function
     cartCountElement.textContent = cart.reduce((total, item) => total + item.quantity, 0);
 }
 
-function addToCart(productName, productPriceRupees) {
+function addToCart(productId,productName, productPriceRupees) {
+    console.log(productPriceRupees, "ccccccccccccccc");
     let existingProduct = cart.find(item => item.name === productName);
 
     if (existingProduct) {
         existingProduct.quantity++;
     } else {
-        cart.push({ name: productName, price: productPriceRupees, quantity: 1 });
+        cart.push({ productId: productId, name: productName, price: productPriceRupees, quantity: 1 });
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
@@ -144,20 +145,20 @@ function addToCart(productName, productPriceRupees) {
 
 updateCart();
 
-function addToCart(productName, productPrice) {
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    let existingProduct = cart.find(item => item.name === productName);
-
-    if (existingProduct) {
-        existingProduct.quantity++;
-    } else {
-        cart.push({ name: productName, price: productPrice, quantity: 1 });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(cart));
-    console.log("Added to cart:", cart);
-    window.location.href = "cart.html";
-}
+// function addToCart(productId,productName, productPrice) {
+//     let cart = JSON.parse(localStorage.getItem('cart')) || [];
+//     let existingProduct = cart.find(item => item.name === productName);
+//
+//     if (existingProduct) {
+//         existingProduct.quantity++;
+//     } else {
+//         cart.push({ name: productName, price: productPrice, quantity: 1 });
+//     }
+//
+//     localStorage.setItem('cart', JSON.stringify(cart));
+//     console.log("Added to cart:", cart);
+//     window.location.href = "cart.php";
+// }
 
 
 // Checkout Functionality
@@ -196,4 +197,4 @@ function addToCart(productName, productPrice) {
 //         alert("Your cart is empty!");
 //     }
 // });
-// 
+//

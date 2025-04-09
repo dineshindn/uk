@@ -25,7 +25,7 @@ $role = $_SESSION['role'];
     <meta property="og:title" content="UK" />
     <meta property="og:description" content="UK" />
     <meta name="format-detection" content="telephone=no">
-    <title>UK - Contact Us</title>
+    <title>UK - Order List</title>
     <link rel="shortcut icon" type="image/png" href="images/favicon.png" />
     <link href="./vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
     <link href="./vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -54,7 +54,7 @@ $role = $_SESSION['role'];
             <!-- row -->
             <div class="container-fluid">
                 <div class="d-flex align-items-center mb-4">
-                    <h4 class="fs-20 font-w600 mb-0 me-auto">Product List</h4>
+                    <h4 class="fs-20 font-w600 mb-0 me-auto">Order List</h4>
 
                 </div>
                 <div class="row">
@@ -70,16 +70,22 @@ $role = $_SESSION['role'];
                                                     <th>S.No</th>
                                                     <!-- <th></th> -->
                                                     <th>Name</th>
-                                                    <th>Image</th>
-                                                    <th>Price</th>
-                                                    <th>Quantity</th>
-                                                    <th>Tag</th> 
-                                                    <th>Status</th>
-                                                    <th>Date</th>
+                                                    <th>Phone Number</th>
+                                                    <th>Email</th>
+                                                    <th>Order Amount</th>
+                                                    <th>Payment Status</th>
+                                                    <th>Payment Mode</th>
+                                                    <th>Country</th>
+                                                    <th>State</th> 
+                                                    <th>District</th>
+                                                    <th>City</th>
+                                                    <th>Landmark</th>
+                                                    <th>Pincode</th>
+                                                    <th>Created Date</th>
                                                 </tr>
                                             </thead>
                                             <?php 
-                                            $sql = "SELECT p.*, m.name as productImage FROM `products` p JOIN product_image m ON m.id=p.image_url";
+                                            $sql = "SELECT * FROM `payment` ORDER BY id DESC";
 
                                             $result = mysqli_query($conn, $sql);
                                             $i = 1;
@@ -89,16 +95,19 @@ $role = $_SESSION['role'];
                                             ?>
                                             <tr id="row_<?php echo $rows['id']; ?>">
                                             <td><?php echo $i; ?></td>
-                                                <td>
-                                                    <div style="width: 350px; "><?php echo $rows['name']; ?>
-                                                    </div>
-                                                </td>
-                                                <td> <img src="uploads/<?php echo $rows['productImage']; ?>" width="50" height="50" alt="<?php echo $rows['name']; ?>"> </td>
-                                                <td> <?php echo $rows['price']; ?> </td>
-                                                <td> <?php echo $rows['quantity']." ". $rows['unit']; ?> </td>
-                                                <td> <?php echo $rows['tag']; ?> </td>
-                                                <td> <?php if($rows['status'] == 0){ echo "Active";}else { echo "Inactive"; }  ?> </td>
-                                                <td> <?php echo $rows['created_date']; ?> </td>
+                                                <td> <div style="width: 40vh; "><a href="order-details?ids=<?php echo $rows['id']; ?>"> <?php echo $rows['name']; ?>  </a></div> </td>
+                                                <td><?php echo $rows['mobile']; ?></td>
+                                                <td> <?php echo $rows['email']; ?> </td>
+                                                <td> <?php echo $rows['amount']. " INR"; ?> </td>
+                                                <td> <?php if($rows['orderStatus'] =="success"){ echo '<span class="badge light badge-primary">Paid</span>'; } else { echo '<span class="badge light badge-danger">Failed</span>';} ?> </td>
+                                                <td> <?php if($rows['payment_type'] == 1 ){ echo "Online";}else { echo "COD"; }  ?> </td>
+                                                <td> <?php echo $rows['country']; ?> </td>
+                                                <td> <div style="width: 25vh; "><?php echo $rows['state']; ?> </div> </td>
+                                                <td> <?php echo $rows['district']; ?> </td>
+                                                <td> <?php echo $rows['city']; ?> </td>
+                                                <td> <?php echo $rows['landmark']; ?> </td>
+                                                <td> <?php echo $rows['pincode']; ?> </td> 
+                                                <td> <div style="width: 30vh; "><?php echo $rows['created_date']; ?> </div> </td>
                                             </tr>
 
 
