@@ -234,9 +234,9 @@ if (isset($_POST['save_submit'])) {
                                                     <option value="litters"
                                                         <?php echo ($Get_all_details['unit'] == 'litters') ? 'selected' : ''; ?>>
                                                         litters</option>
-                                                    <option value="piece"
-                                                        <?php echo ($Get_all_details['unit'] == 'piece') ? 'selected' : ''; ?>>
-                                                        piece</option>
+                                                    <option value="pieces"
+                                                        <?php echo ($Get_all_details['unit'] == 'pieces') ? 'selected' : ''; ?>>
+                                                        pieces</option>
                                                 </select>
                                             </div>
 

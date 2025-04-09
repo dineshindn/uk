@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Lora:wght@600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -39,61 +39,7 @@
     <!-- Spinner End -->
 
 
-    <!-- Navbar Start -->
-    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="top-bar row gx-0 align-items-center d-none d-lg-flex">
-            <div class="col-lg-6 px-5 text-start">
-                <small class="ms-4"><i class="fa fa-phone-alt me-2"></i>+91 91087 77377</small>
-                <small class="ms-4"><i class="fa fa-envelope me-2"></i>Uk66744@gmail.com</small>
-                <small><i class="fa fa-map-marker-alt me-2"></i>AGB layout Bangalore - 560090</small>
-            </div>
-            <div class="col-lg-6 px-5 text-end">
-                <small>Follow us:</small>
-                <a class="text-body ms-3" href=""><i class="fab fa-instagram"></i></a>
-                <a class="text-body ms-3" href=""><i class="fab fa-facebook-f"></i></a>
-                <a class="text-body ms-3" href=""><i class="fab fa-youtube"></i></a>
-            </div>
-        </div>
-
-        <nav class="navbar navbar-expand-lg navbar-light py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
-            <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                <img src="img/Logo.png" alt="Foody Logo" height="50">
-            </a>
-
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link active">Home</a>
-                    <a href="product.html" class="nav-item nav-link">Products</a>
-                    <!-- <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                            <a href="feature.html" class="dropdown-item">Our Features</a>
-                            <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                            <a href="404.html" class="dropdown-item">404 Page</a>
-                        </div>
-                    </div> -->
-                    <a href="contact.html" class="nav-item nav-link">Contact Us</a>
-                </div>
-                <div class="d-none d-lg-flex ms-2">
-                    <!-- <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-search text-body"></small>
-                    </a> -->
-                    <!-- <a class="btn-sm-square bg-white rounded-circle ms-3" href="">
-                        <small class="fa fa-user text-body"></small>
-                    </a> -->
-                    <a class="btn-sm-square bg-white rounded-circle ms-3" href="cart.html">
-                        <small class="fa fa-shopping-bag text-body"></small>
-                    </a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- Navbar End -->
+    <?php include 'include/navbar.php'?>
 
 
     <!-- Page Header Start -->
@@ -102,7 +48,7 @@
             <h1 class="display-3 mb-3 animated slideInDown">Contact Us</h1>
             <nav aria-label="breadcrumb animated slideInDown">
                 <ol class="breadcrumb mb-0">
-                    <li class="breadcrumb-item"><a class="text-body" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item"><a class="text-body" href="index.php">Home</a></li>
                     <li class="breadcrumb-item text-dark active" aria-current="page">Contact Us</li>
                 </ol>
             </nav>
@@ -178,64 +124,8 @@
     </div>
     <!-- Google Map End -->
       <br>
-  <!-- Footer Start -->
-  <div class="container-fluid bg-dark footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
-    <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-3 col-md-6">
-                <a href="index.html" class="navbar-brand ms-4 ms-lg-0">
-                    <img src="img/Logo.png" alt="Foody Logo" height="50">
-                </a>
-                <p>Snacks vary from nutritious to indulgent, while fryums are a distinct, crispy, flavored, starch-based snack.</p>
-                <div class="d-flex pt-2">
-                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                            class="fab fa-instagram"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-square btn-outline-light rounded-circle me-1" href=""><i
-                            class="fab fa-youtube"></i></a>
-                   
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Address</h4>
-                <p><i class="fa fa-map-marker-alt me-3"></i>AGB layout Bangalore 560090</p>
-                <p><i class="fa fa-phone-alt me-3"></i>+91 91087 77377</p>
-                <p><i class="fa fa-envelope me-3"></i>Uk66744@gmail.com</p>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="product.html">Products</a>
-                <a class="btn btn-link" href="contact.html">Contact Us</a>
-                <a class="btn btn-link" href="">Our Services</a>
-                <a class="btn btn-link" href="">Terms & Condition</a>
-                <a class="btn btn-link" href="">Support</a>
-            </div>
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-light mb-4">Products</h4>
-                <a class="btn btn-link" href="Onion Rings.html">Onion Rings</a>
-                <a class="btn btn-link" href="Wheel Fryums.html">Wheel Fryums</a>
-                <a class="btn btn-link" href="Beetroot Chips.html">Beetroot Chips</a>
-                <a class="btn btn-link" href="Carrot Chips.html">Carrot Chips</a>
-                <a class="btn btn-link" href="Potato Chips.html">Potato Chips</a>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a href="#">ukenterprises</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                    Designed By <a href="https://staticdevelopers.in/">CDP</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Footer End -->
+
+    <?php include 'include/footer.php'?>
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>

@@ -87,13 +87,13 @@ if (isset($_POST['save'])) {
                                             <label class="mb-1"><strong>Password</strong></label>
                                             <input placeholder="Password" class="form-control" type="password" data-parsley-required="true" data-parsley-error-message="Please enter your password." name="password" id="password" autocomplete="off" />
                                         </div>
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                             <p id="agree-terms"> By signing in, I agree to the
                                                 <a href="../privacy-policy" target="_blank">UK Privacy Statement</a> and <a target="_blank" href="#">Terms of Service</a>.
                                             </p>
-                                        </div>
+                                        </div> -->
 
-                                        <p style="float: right;"><a href="forgot-password">Forgot password?</a></p>
+                                        <!-- <p style="float: right;"><a href="forgot-password">Forgot password?</a></p> -->
 
                                         <div class="text-center">
                                             <button class="btn btn-primary btn-block" type="button" id="login_btn">Login </button>
